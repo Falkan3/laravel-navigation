@@ -48,7 +48,8 @@ class ActiveUrlChecker
         $matchPath = Str::removeFromStart($rootPath, $matchPath);
 
         // If this url starts with the url we're matching with, it's active.
-        if ($matchPath === $itemPath || Str::startsWith($matchPath, $itemPath)) {
+        // || Str::startsWith($matchPath, $itemPath)
+        if ($matchPath === $itemPath) {
             return true;
         }
 
